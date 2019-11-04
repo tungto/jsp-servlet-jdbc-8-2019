@@ -1,0 +1,9 @@
+INDEX VERSION 1.131
+E:\JAVA-WEB-8-2019\workspace-jsp-servlet-8-2019\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2510258510.index
+\java-console\src\main\java
+E:\JAVA-WEB-8-2019\workspace-jsp-servlet-8-2019\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2720707819.index
+\jsp-servlet-8-2019\src\main\java
+E:\JAVA-WEB-8-2019\workspace-jsp-servlet-8-2019\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3128130402.index
+\java-console\src\main\java
+E:\JAVA-WEB-8-2019\workspace-jsp-servlet-8-2019\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2095979224.index
+\jsp-servlet-8-2019\src\main\java

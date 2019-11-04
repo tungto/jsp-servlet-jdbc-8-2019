@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;java-console&apos; to &apos;jsp-servlet-8-2019&apos;" description="Rename resource &apos;java-console&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="/java-console" name="jsp-servlet-8-2019" stamp="1572878884927" updateReferences="true"/>
+</session>
