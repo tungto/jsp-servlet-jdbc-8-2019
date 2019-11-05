@@ -7,4 +7,5 @@ import com.laptrinhjavaweb.paging.Pageable;
 
 public interface JPARepository<T> {
 	List<T> findAll(Map<String, Object> properties,  Pageable pageable, Object...objects);
+	List<T> findAll(Map<String, Object> properties,  Object...objects);
 }

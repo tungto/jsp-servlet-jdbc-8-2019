@@ -12,6 +12,7 @@ import com.laptrinhjavaweb.paging.Pageable;
 import com.laptrinhjavaweb.responsitory.IBuildingRepository;
 import com.laptrinhjavaweb.responsitory.impl.BuildingRepository;
 import com.laptrinhjavaweb.service.IBuildingService;
+import com.mysql.cj.util.StringUtils;
 
 public class BuildingService implements IBuildingService {
 
@@ -42,19 +43,19 @@ public class BuildingService implements IBuildingService {
 		Map<String, Object> properties = new HashMap<String,Object>();
 		properties.put("name", fieldSearch.getName());
 		properties.put("district", fieldSearch.getDistrict());
-		properties.put("buildingArea", fieldSearch.getBuildingArea());
-		properties.put("numberOfBasement", fieldSearch.getNumberOfBasement());
+		
+		if(org.apache.commons.lang.StringUtils.isNotBlank(fieldSearch.getBuildingArea())) {
+			properties.put("buildingArea", Integer.parseInt(fieldSearch.getBuildingArea()));
+		}
+		if(org.apache.commons.lang.StringUtils.isNotBlank(fieldSearch.getBuildingArea())) {
+			properties.put("numberOfBasement", Integer.parseInt(fieldSearch.getNumberOfBasement()));
+		}
+		
+		
 
 		
 		return buildingRepository.findAll(properties, pageable).stream().map(item -> buildingConverter.convertToBTO(item))
 				.collect(Collectors.toList());
 	}
-
-	/*@Override
-	public List<BuildingDTO> findAll(String name, String district, int buildingArea, int numberOfBasement, int offset,
-			int limit) {
-		// TODO Auto-generated method stub
-		return null;
-	}*/
 
 }

@@ -4,9 +4,29 @@ public class BuildingDTO  extends AbstractDTO{
 
 	private String name;
 
-	private Integer numberOfBasement;
+//	private Integer numberOfBasement;
+//
+//	private Integer buildingArea;
+	
+	private String numberOfBasement;
+	
+	private String buildingArea;
 
-	private Integer buildingArea;
+	public String getNumberOfBasement() {
+		return numberOfBasement;
+	}
+
+	public void setNumberOfBasement(String numberOfBasement) {
+		this.numberOfBasement = numberOfBasement;
+	}
+
+	public String getBuildingArea() {
+		return buildingArea;
+	}
+
+	public void setBuildingArea(String buildingArea) {
+		this.buildingArea = buildingArea;
+	}
 
 	private String district;
 
@@ -46,9 +66,9 @@ public class BuildingDTO  extends AbstractDTO{
 
 	// java bean is getter/setter => all access modifier for variable is private
 
-	public Integer getBuildingArea() {
-		return buildingArea;
-	}
+//	public Integer getBuildingArea() {
+//		return buildingArea;
+//	}
 
 	public String getWard() {
 		return ward;
@@ -110,9 +130,9 @@ public class BuildingDTO  extends AbstractDTO{
 		return type;
 	}
 
-	public void setBuildingArea(Integer buildingArea) {
-		this.buildingArea = buildingArea;
-	}
+//	public void setBuildingArea(Integer buildingArea) {
+//		this.buildingArea = buildingArea;
+//	}
 
 	public void setWard(String ward) {
 		this.ward = ward;
@@ -198,13 +218,13 @@ public class BuildingDTO  extends AbstractDTO{
 		this.structure = structure;
 	}
 
-	public Integer getNumberOfBasement() {
+	/*public Integer getNumberOfBasement() {
 		return numberOfBasement;
 	}
 
 	public void setNumberOfBasement(Integer numberOfBasement) {
 		this.numberOfBasement = numberOfBasement;
-	}
+	}*/
 
 	public String getName() {
 		return name;

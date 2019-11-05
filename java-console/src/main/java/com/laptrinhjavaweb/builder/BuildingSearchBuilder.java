@@ -4,14 +4,26 @@ public class BuildingSearchBuilder {
 	// required parameters
 	private String name;
 	private String district;
-	private Integer buildingArea;
-	private Integer numberOfBasement;
+//	private Integer buildingArea;
+//	private Integer numberOfBasement;
+	
+	private String buildingArea;
+	private String numberOfBasement;
 
-	public Integer getBuildingArea() {
+//	public Integer getBuildingArea() {
+//		return buildingArea;
+//	}
+//
+//	public Integer getNumberOfBasement() {
+//		return numberOfBasement;
+//	}
+	
+
+	public String getBuildingArea() {
 		return buildingArea;
 	}
 
-	public Integer getNumberOfBasement() {
+	public String getNumberOfBasement() {
 		return numberOfBasement;
 	}
 
@@ -37,8 +49,10 @@ public class BuildingSearchBuilder {
 		// required parameters
 		private String name;
 		private String district;
-		private Integer buildingArea;
-		private Integer numberOfBasement;
+//		private Integer buildingArea;
+//		private Integer numberOfBasement;
+		private String buildingArea;
+		private String numberOfBasement;
 
 		public Builder setName(String name) {
 			this.name = name;
@@ -49,12 +63,22 @@ public class BuildingSearchBuilder {
 			this.district = district;
 			return this;
 		}
-		public Builder setBuildingArea(Integer buildingArea) {
+//		public Builder setBuildingArea(Integer buildingArea) {
+//			this.buildingArea = buildingArea;
+//			return this;
+//		}
+//
+//		public Builder setNumberOfBasement(Integer numberOfBasement) {
+//			this.numberOfBasement = numberOfBasement;
+//			return this;
+//		}
+		
+		public Builder setBuildingArea(String buildingArea) {
 			this.buildingArea = buildingArea;
 			return this;
 		}
 
-		public Builder setNumberOfBasement(Integer numberOfBasement) {
+		public Builder setNumberOfBasement(String numberOfBasement) {
 			this.numberOfBasement = numberOfBasement;
 			return this;
 		}

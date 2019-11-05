@@ -17,15 +17,12 @@ import com.laptrinhjavaweb.paging.Pageable;
 import com.laptrinhjavaweb.service.IBuildingService;
 import com.laptrinhjavaweb.service.impl.BuildingService;
 import com.laptrinhjavaweb.utils.FormUtil;
-import com.laptrinhjavaweb.utils.HttpUtil;
 
 @WebServlet(urlPatterns = { "/api-building", "/api-user", "/api-customer" })
 public class BuildingAPI extends HttpServlet {
- 
+
 	private static final long serialVersionUID = 7791882872114240785L;
 	private IBuildingService buildingService = new BuildingService();;
-
-	 
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
@@ -39,17 +36,16 @@ public class BuildingAPI extends HttpServlet {
 		response.setContentType("application/json");
 //		BuildingDTO buildings = HttpUtil.of(request.getReader()).toModel(BuildingDTO.class);
 		BuildingDTO building = FormUtil.toModel(BuildingDTO.class, request);
-		/*
-		 * BuildingSearchBuilder buildingSearchBuilder = new
-		 * BuildingSearchBuilder.Builder() .setName(building.getName())
-		 * .setDistrict(building.getDistrict())
-		 * .setBuildingArea(building.getBuildingArea())
-		 * .setNumberOfBasement(building.getNumberOfBasement()) .build(); Pageable
-		 * pageable = new PageRequest(building.getPage(), building.getLimit());
-		 * List<BuildingDTO> buildings = buildingService.findAll(buildingSearchBuilder,
-		 * pageable);
-		 */
-		mapper.writeValue(response.getOutputStream(), building);
+
+		BuildingSearchBuilder buildingSearchBuilder = new BuildingSearchBuilder.Builder().setName(building.getName())
+				.setDistrict(building.getDistrict())
+				.setBuildingArea(building.getBuildingArea())
+				.setNumberOfBasement(building.getNumberOfBasement())
+				.build();
+		Pageable pageable = new PageRequest(building.getPage(), building.getLimit());
+		List<BuildingDTO> buildings = buildingService.findAll(buildingSearchBuilder, pageable);
+
+		mapper.writeValue(response.getOutputStream(), buildings);
 	}
 
 	protected void doDelete(HttpServletRequest request, HttpServletResponse response)
